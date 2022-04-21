@@ -1,3 +1,3 @@
-# Learning Go With Tests
+# learn-go-with-tests
 
-Code examples and notes created whilst following along with: https://quii.gitbook.io/learn-go-with-tests/
+Notes and code examples created whilst following the [Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests/) 
