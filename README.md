@@ -27,7 +27,20 @@ an interface that `*testing.T` and `*testing.B` both satisfy, so you can call
 helper functions from a test, or a benchmark
 - `t.Helper()` is needed to tell the test suite that this method is a helper. 
 By doing this when it fails the line number reported will be in our function 
-call rather than inside our test helper. 
+call rather than inside our test helper.
+
+- [hello.go](/hello/hello.go)
+- [hello_test.go](/hello/hello_test.go)
+
+#### Integers
+
+- [Examples](https://go.dev/blog/examples) not only document your code but
+are checked for correctness so will be maintained as the code changes
+- run tests including examples using `go test -v`
+- require to include commented output value in order to be executable
+
+- [adder.go](/integers/adder.go)
+- [adder_test.go](/integers/adder_test.go)
 
 ### TODO
 
