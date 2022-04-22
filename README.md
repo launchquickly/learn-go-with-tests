@@ -42,6 +42,12 @@ are checked for correctness so will be maintained as the code changes
 - [adder.go](/integers/adder.go)
 - [adder_test.go](/integers/adder_test.go)
 
+#### Iteration
+
+- [repeat.go](/iteration/repeat.go)
+- [repeat_test.go](/iteration/repeat_test.go)
+
+
 ### TODO
 
 Investigate other VS Code configurations details for vS Code Go
