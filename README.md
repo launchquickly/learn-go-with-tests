@@ -4,19 +4,55 @@ Notes and code examples created whilst following the [Learn Go with Tests](https
 
 ## VS Code Refactoring Quick Fix commands
 
-| Action                   | Quick Fix Keys     |
+| Action                      | Key Binding          |
 | --- | --- |
-| Run Code                 | Ctrl + F5       |
-| Code Complete            | Ctrl + Space       |
-| Rename                   | F2                 |
-| Extract/Inline variable  | Ctrl + Shift + R   |
-| Extract method/function  | Ctrl + Shift + R   |
-| go fmt                   | Runs on Save       |
-| View function signature  | hover over symbol  |
-| View function definition | Ctrl + Shift + F10 |
-| Find usages of a symbol  | Alt + Shift + F12  |
+| Run code                    | Ctrl + F5            |
+| Debug code                  | F5                   |
+| Debug previous              | Alt + Shift + D    * |
+| Debug - Continue/Pause      | F5                   |
+| Debug - Step over           | F10                  |
+| Debug - Step into           | F11                  |
+| Debug - Step out            | Shift + F11          |
+| Debug - Restart             | Ctrl + Shift + F5    |
+| Debug - Stop                | Shift + F5           |
+| Run test at cursor          | Alt + Shift + T    * |
+| Run previous test           | Alt + Shift + P    * |
+| Run benchmark at cursor     | Alt + Shift + B    * |
+| Run subtest at cursor       | Alt + Shift + S    * |
+| Debug test at cursor        | F5                   |
+| Run tests in file           | Alt + Shift + Y    * |
+| Run benchmarks in file      | Alt + Shift + N    * |
+| Run tests in package        | Alt + Shift + U    * |
+| Run benchmarks in package   | Alt + Shift + M    * |
+| Run tests in workspace      | Alt + Shift + W    * |
+| Cancel running tests        | Alt + Shift + C    * |
+| Lint package                | Alt + Shift + K    * |
+| Lint workspace              | Alt + Shift + L    * |
+| Vet package                 | Alt + Shift + V    * |
+| Vet workspace               | Alt + Shift + G    * |
+| Toggle test file            | Alt + Shift + X    * |
+| Code complete               | Ctrl + Space         |
+| Signature Help              | Ctrl + Shift + Space |
+| Add import                  | Alt + Shift + A    * |
+| Rename                      | F2                   |
+| Extract/Inline variable     | Ctrl + Shift + R     |
+| Extract method/function     | Ctrl + Shift + R     |
+| Extract to function         | Alt + Shift + E    * |
+| Extract to variable         | Alt + Shift + R    * |
+| go fmt                      | Runs on Save         |
+| View function signature     | hover over symbol    |
+| Go to function definition   | F12                  |
+| View function definition    | Ctrl + Shift + F10   |
+| Find usages of a symbol     | Alt + Shift + F12    |
+| Show call hierachy          | Shift + Alt + H      |
+| Go to symbol in file        | Ctrl + Shift + O     |
+| Go to symbol in workspace   | Ctrl + T             |
+
+\* - cutstom key binding
 
 ### Notes
+
+Settings saved and sync via: [Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync)
 
 #### Hello, World
 
@@ -54,4 +90,5 @@ Investigate other VS Code configurations details for vS Code Go
 
 ## References
 
-- [VS Code Go Docs](https://github.com/golang/vscode-go/blob/master/docs/features.md)
+- [Go in VS Code](https://code.visualstudio.com/docs/languages/go)
+- [VS Code Go Docs](https://github.com/golang/vscode-go/blob/master/docs/Home.md)
