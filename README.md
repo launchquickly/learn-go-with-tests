@@ -80,13 +80,31 @@ are checked for correctness so will be maintained as the code changes
 
 #### Iteration
 
-- [repeat.go](/iteration/repeat.go)
-- [repeat_test.go](/iteration/repeat_test.go)
+- [repeat.go](/arrays-and-slices/repeat.go)
+- [repeat_test.go](/arrays-and-slices/repeat_test.go)
 
+#### Arrays and slices
+
+- `range` lets you iterate over an array or slice. Each iteration returns two
+values - the index and the value
+- `make` allows the creation of a slice with a starting capacity
+- `append` will grow a new slice from the one supplied to have a capacity to 
+include the new values supplied
+
+- [sum.go](/arrays-and-slices/sum.go)
+- [sum_test.go](/arrays-and-slices/sum_test.go)
+
+Useful format verbs:
+
+| Verb | Type    | Use                                         |
+| --- | --- |--- |
+| `%v` | General | the value in a default format               |
+| `%d` | integer | base 10                                     |
+| `%q` | string  | double-quoted safely escaped with Go syntax |
 
 ### TODO
 
-Investigate other VS Code configurations details for vS Code Go
+Investigate other VS Code configurations details for VS Code Go
 
 ## References
 
