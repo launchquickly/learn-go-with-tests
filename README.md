@@ -94,13 +94,21 @@ include the new values supplied
 - [sum.go](/arrays-and-slices/sum.go)
 - [sum_test.go](/arrays-and-slices/sum_test.go)
 
+#### Structs, methods & interfaces
+
+- [shapes.go](/structs-methods-interfaces/shapes.go)
+- [shapes_test.go](/structs-methods-interfaces/shapes_test.go)
+
+
 Useful format verbs:
 
-| Verb | Type    | Use                                         |
+| Verb | Type            | Use                                         |
 | --- | --- |--- |
-| `%v` | General | the value in a default format               |
-| `%d` | integer | base 10                                     |
-| `%q` | string  | double-quoted safely escaped with Go syntax |
+| `%v` | General         | the value in a default format               |
+| `%d` | integer         | base 10                                     |
+| `%f` | floating point  | decmial point but not exponent e.g. `9.2f%` |
+| `%g` | floating point  | for a precise decimal number                |
+| `%q` | string          | double-quoted safely escaped with Go syntax |
 
 ### TODO
 
