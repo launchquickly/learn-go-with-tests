@@ -110,6 +110,16 @@ take a pointer to the thing you want to change
 - [wallet.go](/pointers-errors/wallet.go)
 - [wallet_test.go](/pointers-errors/wallet_test.go)
 
+#### Maps
+
+- [constant error](https://dave.cheney.net/2016/04/07/constant-errors) pattern 
+looks worth adopting
+- a `map` value is a pointer to a `runtime.hmap` structure
+    - to avoid panics never initialise an empty map **variable**
+    - instead initialise an empty map
+
+- [dictionary.go](/maps/dictionary.go)
+- [dictionary_test.go](/maps/dictionary_test.go)
 
 Useful format verbs:
 
