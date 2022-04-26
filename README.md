@@ -121,6 +121,14 @@ looks worth adopting
 - [dictionary.go](/maps/dictionary.go)
 - [dictionary_test.go](/maps/dictionary_test.go)
 
+#### Dependency Injection
+
+- you don't need a framework for dependency injection
+- it encourages writing of general-purpose functions
+
+- [greet.go](/dependency-injection/greet.go)
+- [greet_test.go](/dependency-injection/greet_test.go)
+
 Useful format verbs:
 
 | Verb | Type            | Use                                         |
