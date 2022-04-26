@@ -99,6 +99,17 @@ include the new values supplied
 - [shapes.go](/structs-methods-interfaces/shapes.go)
 - [shapes_test.go](/structs-methods-interfaces/shapes_test.go)
 
+#### Pointers & errors
+
+- if you're writing a function that needs to mutate state you'll need it to
+take a pointer to the thing you want to change
+- pointers can be `nil`
+- errors are values, so we can reference them as a variable
+- it is possible to create new types from existing ones
+
+- [wallet.go](/pointers-errors/wallet.go)
+- [wallet_test.go](/pointers-errors/wallet_test.go)
+
 
 Useful format verbs:
 
