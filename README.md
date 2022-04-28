@@ -153,6 +153,16 @@ of a function
 - [checkwebsites.go](/concurrency/checkwebsites.go)
 - [checkwebsites_test.go](/concurrency/checkwebsites_test.go)
 
+#### Select
+
+- `select` helps you wait on multiple channels
+- `time.After` can be handy as one of your `case` statements to timeout long
+running code
+- `httptest` is a convenient way of creating test servers
+
+- [racer.go](/select/racer.go)
+- [racer_test.go](/select/racer_test.go)
+
 Useful format verbs:
 
 | Verb | Type            | Use                                         |
