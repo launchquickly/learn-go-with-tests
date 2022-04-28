@@ -137,6 +137,22 @@ looks worth adopting
 - [countdown.go](/mocking/countdown.go)
 - [countdown_test.go](/mocking/countdown_test.go)
 
+#### Concurrency
+
+- benchmark tests can give insight into performance: `go test -bench=.`
+- *goroutines* runs as a separate process - created by putting `go` in front 
+of a function
+- *anonymous functions* are frequently combined with goroutines as they:
+    - can be executed at the same time they're declared
+    - maintain access to lexical scope
+- *channels* organise and control communication between different processes
+- *race detector* can help spot race conditions: `go test -race`
+
+> [Make it work, make it right, make it fast](http://wiki.c2.com/?MakeItWorkMakeItRightMakeItFast)
+
+- [checkwebsites.go](/concurrency/checkwebsites.go)
+- [checkwebsites_test.go](/concurrency/checkwebsites_test.go)
+
 Useful format verbs:
 
 | Verb | Type            | Use                                         |
