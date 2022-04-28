@@ -129,6 +129,14 @@ looks worth adopting
 - [greet.go](/dependency-injection/greet.go)
 - [greet_test.go](/dependency-injection/greet_test.go)
 
+#### Mocking
+
+- use an *iterative, test-driven approach*
+- slow test ruin developer productivity
+
+- [countdown.go](/mocking/countdown.go)
+- [countdown_test.go](/mocking/countdown_test.go)
+
 Useful format verbs:
 
 | Verb | Type            | Use                                         |
