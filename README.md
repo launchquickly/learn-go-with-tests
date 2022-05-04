@@ -163,6 +163,13 @@ running code
 - [racer.go](/select/racer.go)
 - [racer_test.go](/select/racer_test.go)
 
+#### Reflection
+
+- only use reflection if you really need to
+
+- [reflection.go](/reflection/reflection.go)
+- [reflection_test.go](/reflection/reflection_test.go)
+
 Useful format verbs:
 
 | Verb | Type            | Use                                         |
