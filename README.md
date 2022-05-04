@@ -170,6 +170,19 @@ running code
 - [reflection.go](/reflection/reflection.go)
 - [reflection_test.go](/reflection/reflection_test.go)
 
+#### Sync
+
+- `Mutex` allows us to add locks to our data
+- `WaitGroup` is a means of waiting for goroutines to complete
+- When to use locks over channels
+    - Use channels when passing ownership of data
+    - Use mutexes for managing state
+- Don't use embedding because it is convenient
+    - Think about the effect embedding has on your public API
+
+- [sync.go](/sync/sync.go)
+- [sync_test.go](/sync/sync_test.go)
+
 Useful format verbs:
 
 | Verb | Type            | Use                                         |
