@@ -183,6 +183,21 @@ running code
 - [sync.go](/sync/sync.go)
 - [sync_test.go](/sync/sync_test.go)
 
+#### Context
+
+- `context` helps to manage long running processes
+- you should derive your context so that cancellations are propogated throughout
+the call stack
+- idiomatic go encourage the passing of a context as the first parameter of
+all methods in involved on the call path between incoming and outgoing
+requests
+- you can use `select`, channels and goroutines when managing the 
+cancellation of contexts
+- using `context.Value` is a last resort, not a first 
+
+- [context.go](/context/context.go)
+- [context_test.go](/context/context_test.go)
+
 Useful format verbs:
 
 | Verb | Type            | Use                                         |
