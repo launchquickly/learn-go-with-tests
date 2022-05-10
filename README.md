@@ -198,6 +198,14 @@ cancellation of contexts
 - [context.go](/context/context.go)
 - [context_test.go](/context/context_test.go)
 
+#### Intro to property based tests
+
+- built into standard library
+- `quick.Check` runs a number of random inputs checkinf for failures
+
+- [numeral.go](/property-based/numeral.go)
+- [numeral_test.go](/property-based/numeral_test.go)
+
 Useful format verbs:
 
 | Verb | Type            | Use                                         |
