@@ -1,12 +1,14 @@
+// Writes an SVG clockface of the current time to Stdout.
 package main
 
 import (
-	"clockface"
 	"os"
 	"time"
+
+	"github.com/launchquickly/learn-go-with-tests/maths/svg"
 )
 
 func main() {
 	t := time.Now()
-	clockface.SVGWriter(os.Stdout, t)
+	svg.Write(os.Stdout, t)
 }

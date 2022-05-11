@@ -1,10 +1,12 @@
-package clockface
+package svg_test
 
 import (
 	"bytes"
 	"encoding/xml"
 	"testing"
 	"time"
+
+	"github.com/launchquickly/learn-go-with-tests/maths/svg"
 )
 
 type SVG struct {
@@ -45,7 +47,7 @@ func TestSVGWriterHourHand(t *testing.T) {
 	for _, c := range cases {
 		t.Run(testName(c.time), func(t *testing.T) {
 			b := bytes.Buffer{}
-			SVGWriter(&b, c.time)
+			svg.Write(&b, c.time)
 
 			svg := SVG{}
 			xml.Unmarshal(b.Bytes(), &svg)
@@ -71,7 +73,7 @@ func TestSVGWriterMinuteHand(t *testing.T) {
 	for _, c := range cases {
 		t.Run(testName(c.time), func(t *testing.T) {
 			b := bytes.Buffer{}
-			SVGWriter(&b, c.time)
+			svg.Write(&b, c.time)
 
 			svg := SVG{}
 			xml.Unmarshal(b.Bytes(), &svg)
@@ -101,7 +103,7 @@ func TestSVGWriterSecondHand(t *testing.T) {
 	for _, c := range cases {
 		t.Run(testName(c.time), func(t *testing.T) {
 			b := bytes.Buffer{}
-			SVGWriter(&b, c.time)
+			svg.Write(&b, c.time)
 
 			svg := SVG{}
 			xml.Unmarshal(b.Bytes(), &svg)
@@ -120,4 +122,12 @@ func containsLine(l Line, ls []Line) bool {
 		}
 	}
 	return false
+}
+
+func simpleTime(hours, minutes, seconds int) time.Time {
+	return time.Date(312, time.October, 28, hours, minutes, seconds, 0, time.UTC)
+}
+
+func testName(t time.Time) string {
+	return t.Format("15:04:05")
 }
