@@ -28,6 +28,8 @@ func HourHandPoint(t time.Time) Point {
 	return angleToPoint(HoursInRadians(t))
 }
 
+// HoursInRadians returns the angle of the hour hand from 12 o'clock
+// in radians.
 func HoursInRadians(t time.Time) float64 {
 	return (MinutesInRadians(t) / hoursInClock) +
 		(math.Pi / (hoursInHalfClock / float64(t.Hour()%hoursInClock)))
@@ -39,6 +41,8 @@ func MinuteHandPoint(t time.Time) Point {
 	return angleToPoint(MinutesInRadians(t))
 }
 
+// MinutesInRadians returns the angle of the minute hand from 12 o'clock
+// in radians.
 func MinutesInRadians(t time.Time) float64 {
 	return (SecondsInRadians(t) / minutesInClock) +
 		(math.Pi / (minutesInHalfClock / float64(t.Minute())))
@@ -50,6 +54,8 @@ func SecondHandPoint(t time.Time) Point {
 	return angleToPoint(SecondsInRadians(t))
 }
 
+// SecondsInRadians returns the angle of the hour hand from 12 o'clock
+// in radians.
 func SecondsInRadians(t time.Time) float64 {
 	return math.Pi / (secondsInHalfClock / float64(t.Second()))
 }
