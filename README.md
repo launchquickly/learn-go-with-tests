@@ -206,6 +206,21 @@ cancellation of contexts
 - [numeral.go](/property-based/numeral.go)
 - [numeral_test.go](/property-based/numeral_test.go)
 
+#### Maths
+
+- developing an acceptance test alongside unit test can tell us when we are 
+done
+- `encoding/xml` Go package helps handle simple xml parsing
+- refactoring to a public API was an interesting exercise
+- namespacing go.mod made much more sense when doing this exercise
+
+- [go.mod](/maths/go.mod)
+- [main.go](/maths/clockface/main.go)
+- [clockface.go](/maths/clockface.go)
+- [clockface.go](/maths/clockface_test.go)
+- [svg.go](/maths/svg/svg.go)
+- [svg_test.go](/maths/svg/svg_test.go)
+
 Useful format verbs:
 
 | Verb | Type            | Use                                         |
