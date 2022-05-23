@@ -221,6 +221,16 @@ done
 - [svg.go](/maths/svg/svg.go)
 - [svg_test.go](/maths/svg/svg_test.go)
 
+#### Reading files
+
+- `io/fs` package introduced an abstraction of the filesystem
+- this can help decouple or code from the particular filesystem details
+- `testing/fstest` offers an implementation of `io/fs` for writing tests 
+
+- [post.go](/reading-files/post.go)
+- [blogposts.go](/reading-files/blogposts.go)
+- [blogposts_test.go](/reading-files/blogposts_test.go)
+
 Useful format verbs:
 
 | Verb | Type            | Use                                         |
