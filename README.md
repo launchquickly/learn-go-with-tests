@@ -231,6 +231,17 @@ done
 - [blogposts.go](/reading-files/blogposts.go)
 - [blogposts_test.go](/reading-files/blogposts_test.go)
 
+#### Templating
+
+- `text/template` and `html/template` are useful templating packages
+- `embed` provides access to files embedded in the Go program
+- Approval tests allow for easy testing of larger objects, strings, etc
+    - [github.com/approvals/go-approval-tests](github.com/approvals/go-approval-tests)
+- #TODO investigate rendering of Body of posts
+
+- [renderer.go](/blogrenderer/renderer.go)
+- [renderer_test.go](/blogrenderer/renderer_test.go)
+
 Useful format verbs:
 
 | Verb | Type            | Use                                         |
