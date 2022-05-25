@@ -65,6 +65,8 @@ helper functions from a test, or a benchmark
 By doing this when it fails the line number reported will be in our function 
 call rather than inside our test helper.
 
+##### code
+
 - [hello.go](/hello/hello.go)
 - [hello_test.go](/hello/hello_test.go)
 
@@ -74,6 +76,8 @@ call rather than inside our test helper.
 are checked for correctness so will be maintained as the code changes
 - run tests including examples using `go test -v`
 - require to include commented output value in order to be executable
+
+##### code
 
 - [adder.go](/integers/adder.go)
 - [adder_test.go](/integers/adder_test.go)
@@ -91,6 +95,8 @@ values - the index and the value
 - `append` will grow a new slice from the one supplied to have a capacity to 
 include the new values supplied
 
+##### code
+
 - [sum.go](/arrays-and-slices/sum.go)
 - [sum_test.go](/arrays-and-slices/sum_test.go)
 
@@ -107,6 +113,8 @@ take a pointer to the thing you want to change
 - errors are values, so we can reference them as a variable
 - it is possible to create new types from existing ones
 
+##### code
+
 - [wallet.go](/pointers-errors/wallet.go)
 - [wallet_test.go](/pointers-errors/wallet_test.go)
 
@@ -118,6 +126,8 @@ looks worth adopting
     - to avoid panics never initialise an empty map **variable**
     - instead initialise an empty map
 
+##### code
+
 - [dictionary.go](/maps/dictionary.go)
 - [dictionary_test.go](/maps/dictionary_test.go)
 
@@ -126,6 +136,8 @@ looks worth adopting
 - you don't need a framework for dependency injection
 - it encourages writing of general-purpose functions
 
+##### code
+
 - [greet.go](/dependency-injection/greet.go)
 - [greet_test.go](/dependency-injection/greet_test.go)
 
@@ -133,6 +145,8 @@ looks worth adopting
 
 - use an *iterative, test-driven approach*
 - slow test ruin developer productivity
+
+##### code
 
 - [countdown.go](/mocking/countdown.go)
 - [countdown_test.go](/mocking/countdown_test.go)
@@ -150,6 +164,8 @@ of a function
 
 > [Make it work, make it right, make it fast](http://wiki.c2.com/?MakeItWorkMakeItRightMakeItFast)
 
+##### code
+
 - [checkwebsites.go](/concurrency/checkwebsites.go)
 - [checkwebsites_test.go](/concurrency/checkwebsites_test.go)
 
@@ -160,12 +176,16 @@ of a function
 running code
 - `httptest` is a convenient way of creating test servers
 
+##### code
+
 - [racer.go](/select/racer.go)
 - [racer_test.go](/select/racer_test.go)
 
 #### Reflection
 
 - only use reflection if you really need to
+
+##### code
 
 - [reflection.go](/reflection/reflection.go)
 - [reflection_test.go](/reflection/reflection_test.go)
@@ -179,6 +199,8 @@ running code
     - Use mutexes for managing state
 - Don't use embedding because it is convenient
     - Think about the effect embedding has on your public API
+
+##### code
 
 - [sync.go](/sync/sync.go)
 - [sync_test.go](/sync/sync_test.go)
@@ -195,6 +217,8 @@ requests
 cancellation of contexts
 - using `context.Value` is a last resort, not a first 
 
+##### code
+
 - [context.go](/context/context.go)
 - [context_test.go](/context/context_test.go)
 
@@ -202,6 +226,8 @@ cancellation of contexts
 
 - built into standard library
 - `quick.Check` runs a number of random inputs checkinf for failures
+
+##### code
 
 - [numeral.go](/property-based/numeral.go)
 - [numeral_test.go](/property-based/numeral_test.go)
@@ -213,6 +239,8 @@ done
 - `encoding/xml` Go package helps handle simple xml parsing
 - refactoring to a public API was an interesting exercise
 - namespacing go.mod made much more sense when doing this exercise
+
+##### code
 
 - [go.mod](/maths/go.mod)
 - [main.go](/maths/clockface/main.go)
@@ -227,6 +255,8 @@ done
 - this can help decouple or code from the particular filesystem details
 - `testing/fstest` offers an implementation of `io/fs` for writing tests 
 
+##### code
+
 - [post.go](/reading-files/post.go)
 - [blogposts.go](/reading-files/blogposts.go)
 - [blogposts_test.go](/reading-files/blogposts_test.go)
@@ -239,8 +269,22 @@ done
     - [github.com/approvals/go-approval-tests](github.com/approvals/go-approval-tests)
 - #TODO investigate rendering of Body of posts
 
+##### code
+
 - [renderer.go](/blogrenderer/renderer.go)
 - [renderer_test.go](/blogrenderer/renderer_test.go)
+
+#### Generics
+
+- `interface{}` doesn't allow the compiler to help us write code
+- in Go when using generics you need to provide *type parameters* e.g. `[T comparable]`
+- generics can remove duplication of code and tests
+
+##### code
+
+- [stack.go](/generics/stack.go)
+- [stack_test.go](/generics/stack_test.go)
+- [generics_test.go](/generics/generics_test.go)
 
 Useful format verbs:
 
