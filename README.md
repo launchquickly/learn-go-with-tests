@@ -286,6 +286,17 @@ done
 - [stack_test.go](/generics/stack_test.go)
 - [generics_test.go](/generics/generics_test.go)
 
+#### Revisited - Arrays and slices
+
+- `Reduce` and `Find` higher-order functions illustrate how generics can result 
+in simpler to read and maintain code
+- be open-minded about what is and isn't idiomatic
+
+##### code
+
+- [sum.go](/arrays-and-slices-g/sum.go)
+- [sum_test.go](/arrays-and-slices-g/sum_test.go)
+
 Useful format verbs:
 
 | Verb | Type            | Use                                         |
