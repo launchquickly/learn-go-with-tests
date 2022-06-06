@@ -297,6 +297,23 @@ in simpler to read and maintain code
 - [sum.go](/arrays-and-slices-g/sum.go)
 - [sum_test.go](/arrays-and-slices-g/sum_test.go)
 
+#### Building an application
+
+##### HTTP server
+
+- `http.Handler` use this interface to create web servers
+- `http.HandlerFunc` turns ordinary fuctions into `http.Handler`s
+- build system in smaller chuncks
+
+###### code
+
+- [main.go](/1-http-server/main.go)
+- [server.go](/1-http-server/server.go)
+- [in_memory_player_store.go](/1-http-server/in_memory_player_store.go)
+- [server_test.go](/1-http-server/server_test.go)
+- [server_integration_test.go](/1-http-server/server_integration_test.go)
+
+
 Useful format verbs:
 
 | Verb | Type            | Use                                         |
