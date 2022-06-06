@@ -313,6 +313,16 @@ in simpler to read and maintain code
 - [server_test.go](/1-http-server/server_test.go)
 - [server_integration_test.go](/1-http-server/server_integration_test.go)
 
+##### JSON, routing and embedding
+
+
+###### code
+
+- [main.go](/2-json/main.go)
+- [server.go](/2-json/server.go)
+- [in_memory_player_store.go](/2-json/in_memory_player_store.go)
+- [server_test.go](/2-json/server_test.go)
+- [server_integration_test.go](/2-json/server_integration_test.go)
 
 Useful format verbs:
 
