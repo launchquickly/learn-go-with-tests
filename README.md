@@ -315,6 +315,9 @@ in simpler to read and maintain code
 
 ##### JSON, routing and embedding
 
+- The standard library provides an easy to use to do **routing**
+- **Embedding** can be helpful but need to remember the impact on the public api
+- **JSON deserializing and serialzing** can be handled again using the standard library
 
 ###### code
 
