@@ -367,6 +367,27 @@ in simpler to read and maintain code
 - [server_integration_test.go](/4-cli-and-package-structure/server_integration_test.go)
 - [testing.go](/4-cli-and-package-structure/testing.go)
 
+##### Time
+
+- TBC
+
+###### code
+
+- [go.mod](/5-time/go.mod)
+- [cmd/cli/main.go](/5-time/cmd/cli/main.go)
+- [cmd/webserver/main.go](/5-time/cmd/cli/main.go)
+- [CLI.go](/5-time/CLI.go)
+- [server.go](/5-time/server.go)
+- [league.go](/5-time/league.go)
+- [tape.go](/5-time/tape.go)
+- [file_system_player_store.go](/5-time/file_system_player_store.go)
+- [CLI_test.go](/5-time/CLI_test.go)
+- [server_test.go](/5-time/server_test.go)
+- [file_system_player_store_test.go](/5-time/file_system_player_store_test.go)
+- [tape_test.go](/5-time/tape_test.go)
+- [server_integration_test.go](/5-time/server_integration_test.go)
+- [testing.go](/5-time/testing.go)
+
 Useful format verbs:
 
 | Verb | Type            | Use                                         |
