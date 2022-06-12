@@ -346,19 +346,26 @@ in simpler to read and maintain code
 
 ##### Command line & package structure
 
-- TBC
+- updated package structure to allow different applications to use our domain code
+- use of `mypackage_test` package name to isolate our tests from our implementation code
+- use of `testing.go` pattern to make our test code available for reuse
 
 ###### code
 
-- [main.go](/4-cli-and-package-structure/main.go
+- [go.mod](/4-cli-and-package-structure/go.mod)
+- [cmd/cli/main.go](/4-cli-and-package-structure/cmd/cli/main.go)
+- [cmd/webserver/main.go](/4-cli-and-package-structure/cmd/cli/main.go)
+- [CLI.go](/4-cli-and-package-structure/CLI.go)
 - [server.go](/4-cli-and-package-structure/server.go)
 - [league.go](/4-cli-and-package-structure/league.go)
 - [tape.go](/4-cli-and-package-structure/tape.go)
 - [file_system_player_store.go](/4-cli-and-package-structure/file_system_player_store.go)
+- [CLI_test.go](/4-cli-and-package-structure/CLI_test.go)
 - [server_test.go](/4-cli-and-package-structure/server_test.go)
 - [file_system_player_store_test.go](/4-cli-and-package-structure/file_system_player_store_test.go)
 - [tape_test.go](/4-cli-and-package-structure/tape_test.go)
 - [server_integration_test.go](/4-cli-and-package-structure/server_integration_test.go)
+- [testing.go](/4-cli-and-package-structure/testing.go)
 
 Useful format verbs:
 

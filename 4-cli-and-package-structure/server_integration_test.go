@@ -1,42 +1,44 @@
-package main
+package poker_test
 
 import (
 	"net/http"
 	"net/http/httptest"
 	"testing"
+
+	poker "github.com/launchquickly/learn-go-with-tests/4-cli-and-package-structure"
 )
 
 func TestRecordingWinsAndRetrievingThem(t *testing.T) {
-	database, cleanDatabse := createTempFile(t, "[]")
+	database, cleanDatabse := poker.TestCreateTempFile(t, "")
 	defer cleanDatabse()
 
-	store, err := NewFileSystemPlayerStore(database)
-	assertNoError(t, err)
+	store, err := poker.NewFileSystemPlayerStore(database)
+	poker.AssertNoError(t, err)
 
-	server := NewPlayerServer(store)
+	server := poker.NewPlayerServer(store)
 	player := "Pepper"
 
-	server.ServeHTTP(httptest.NewRecorder(), newPostWinRequest(player))
-	server.ServeHTTP(httptest.NewRecorder(), newPostWinRequest(player))
-	server.ServeHTTP(httptest.NewRecorder(), newPostWinRequest(player))
+	server.ServeHTTP(httptest.NewRecorder(), poker.TestNewPostWinRequest(player))
+	server.ServeHTTP(httptest.NewRecorder(), poker.TestNewPostWinRequest(player))
+	server.ServeHTTP(httptest.NewRecorder(), poker.TestNewPostWinRequest(player))
 
 	t.Run("get score", func(t *testing.T) {
 		response := httptest.NewRecorder()
-		server.ServeHTTP(response, newGetScoreRequest(player))
-		assertStatus(t, response.Code, http.StatusOK)
+		server.ServeHTTP(response, poker.TestNewGetScoreRequest(player))
+		poker.AssertStatus(t, response.Code, http.StatusOK)
 
-		assertResponseBody(t, response.Body.String(), "3")
+		poker.AssertResponseBody(t, response.Body.String(), "3")
 	})
 
 	t.Run("get league", func(t *testing.T) {
 		response := httptest.NewRecorder()
-		server.ServeHTTP(response, newLeagueRequest())
-		assertStatus(t, response.Code, http.StatusOK)
+		server.ServeHTTP(response, poker.TestNewLeagueRequest())
+		poker.AssertStatus(t, response.Code, http.StatusOK)
 
-		got := getLeagueFromResponse(t, response.Body)
-		want := League{
+		got := poker.TestGetLeagueFromResponse(t, response.Body)
+		want := poker.League{
 			{"Pepper", 3},
 		}
-		assertLeague(t, got, want)
+		poker.AssertLeague(t, got, want)
 	})
 }
