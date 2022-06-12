@@ -344,6 +344,22 @@ in simpler to read and maintain code
 - [tape_test.go](/3-io-and-sorting/tape_test.go)
 - [server_integration_test.go](/3-io-and-sorting/server_integration_test.go)
 
+##### Command line & package structure
+
+- TBC
+
+###### code
+
+- [main.go](/4-cli-and-package-structure/main.go
+- [server.go](/4-cli-and-package-structure/server.go)
+- [league.go](/4-cli-and-package-structure/league.go)
+- [tape.go](/4-cli-and-package-structure/tape.go)
+- [file_system_player_store.go](/4-cli-and-package-structure/file_system_player_store.go)
+- [server_test.go](/4-cli-and-package-structure/server_test.go)
+- [file_system_player_store_test.go](/4-cli-and-package-structure/file_system_player_store_test.go)
+- [tape_test.go](/4-cli-and-package-structure/tape_test.go)
+- [server_integration_test.go](/4-cli-and-package-structure/server_integration_test.go)
+
 Useful format verbs:
 
 | Verb | Type            | Use                                         |
