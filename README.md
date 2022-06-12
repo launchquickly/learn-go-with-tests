@@ -327,6 +327,23 @@ in simpler to read and maintain code
 - [server_test.go](/2-json/server_test.go)
 - [server_integration_test.go](/2-json/server_integration_test.go)
 
+##### IO and sorting
+
+- covers working with files
+- `sort.Slice` for sorting slices
+
+###### code
+
+- [main.go](/3-io-and-sorting/main.go)
+- [server.go](/3-io-and-sorting/server.go)
+- [league.go](/3-io-and-sorting/league.go)
+- [tape.go](/3-io-and-sorting/tape.go)
+- [file_system_player_store.go](/3-io-and-sorting/file_system_player_store.go)
+- [server_test.go](/3-io-and-sorting/server_test.go)
+- [file_system_player_store_test.go](/3-io-and-sorting/file_system_player_store_test.go)
+- [tape_test.go](/3-io-and-sorting/tape_test.go)
+- [server_integration_test.go](/3-io-and-sorting/server_integration_test.go)
+
 Useful format verbs:
 
 | Verb | Type            | Use                                         |
