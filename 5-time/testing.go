@@ -8,7 +8,37 @@ import (
 	"os"
 	"reflect"
 	"testing"
+	"time"
 )
+
+type ScheduleAlert struct {
+	At     time.Duration
+	Amount int
+}
+
+func (s ScheduleAlert) String() string {
+	return fmt.Sprintf("%d chips at %v", s.Amount, s.At)
+}
+
+func AssertScheduledAlert(t testing.TB, got, want ScheduleAlert) {
+	amountGot := got.Amount
+	if amountGot != want.Amount {
+		t.Errorf("got amount %d, want %d", amountGot, want.Amount)
+	}
+
+	gotScheduledTime := got.At
+	if gotScheduledTime != want.At {
+		t.Errorf("got scheduled time of %v, want %v", gotScheduledTime, want.At)
+	}
+}
+
+type SpyBlindAlerter struct {
+	Alerts []ScheduleAlert
+}
+
+func (s *SpyBlindAlerter) ScheduleAlertAt(at time.Duration, amount int) {
+	s.Alerts = append(s.Alerts, ScheduleAlert{at, amount})
+}
 
 type StubPlayerStore struct {
 	scores   map[string]int

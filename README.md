@@ -369,7 +369,10 @@ in simpler to read and maintain code
 
 ##### Time
 
-- TBC
+- `time.Afterfunc` allows us to schedule a function call in the future
+- separation of concerns - e.g. separating out code handling user input from domain code
+- for single method interfaces consider defining a `MyInterfaceFunc` too so users can implement
+your interface with just a function
 
 ###### code
 
@@ -378,13 +381,16 @@ in simpler to read and maintain code
 - [cmd/webserver/main.go](/5-time/cmd/cli/main.go)
 - [CLI.go](/5-time/CLI.go)
 - [server.go](/5-time/server.go)
+- [blind_alerter.go](/5-time/blind_alerter.go)
 - [league.go](/5-time/league.go)
 - [tape.go](/5-time/tape.go)
 - [file_system_player_store.go](/5-time/file_system_player_store.go)
+- [texas_holdem.go](/5-time/texas_holdem.go)
 - [CLI_test.go](/5-time/CLI_test.go)
 - [server_test.go](/5-time/server_test.go)
 - [file_system_player_store_test.go](/5-time/file_system_player_store_test.go)
 - [tape_test.go](/5-time/tape_test.go)
+- [texas_holdem_test.go](/5-time/texas_holdem_test.go)
 - [server_integration_test.go](/5-time/server_integration_test.go)
 - [testing.go](/5-time/testing.go)
 
