@@ -394,6 +394,30 @@ your interface with just a function
 - [server_integration_test.go](/5-time/server_integration_test.go)
 - [testing.go](/5-time/testing.go)
 
+##### WebSockets
+
+- TBC
+
+###### code
+
+- [go.mod](/5-time/go.mod)
+- [cmd/cli/main.go](/5-time/cmd/cli/main.go)
+- [cmd/webserver/main.go](/5-time/cmd/cli/main.go)
+- [CLI.go](/5-time/CLI.go)
+- [server.go](/5-time/server.go)
+- [blind_alerter.go](/5-time/blind_alerter.go)
+- [league.go](/5-time/league.go)
+- [tape.go](/5-time/tape.go)
+- [file_system_player_store.go](/5-time/file_system_player_store.go)
+- [texas_holdem.go](/5-time/texas_holdem.go)
+- [CLI_test.go](/5-time/CLI_test.go)
+- [server_test.go](/5-time/server_test.go)
+- [file_system_player_store_test.go](/5-time/file_system_player_store_test.go)
+- [tape_test.go](/5-time/tape_test.go)
+- [texas_holdem_test.go](/5-time/texas_holdem_test.go)
+- [server_integration_test.go](/5-time/server_integration_test.go)
+- [testing.go](/5-time/testing.go)
+
 Useful format verbs:
 
 | Verb | Type            | Use                                         |
