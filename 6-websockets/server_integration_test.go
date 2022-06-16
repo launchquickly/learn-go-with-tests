@@ -5,7 +5,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	poker "github.com/launchquickly/learn-go-with-tests/5-time"
+	poker "github.com/launchquickly/learn-go-with-tests/6-websockets"
 )
 
 func TestRecordingWinsAndRetrievingThem(t *testing.T) {
@@ -15,7 +15,7 @@ func TestRecordingWinsAndRetrievingThem(t *testing.T) {
 	store, err := poker.NewFileSystemPlayerStore(database)
 	poker.AssertNoError(t, err)
 
-	server := poker.NewPlayerServer(store)
+	server := mustMakePlayerServer(t, store, dummyGame)
 	player := "Pepper"
 
 	server.ServeHTTP(httptest.NewRecorder(), poker.TestNewPostWinRequest(player))
@@ -25,7 +25,7 @@ func TestRecordingWinsAndRetrievingThem(t *testing.T) {
 	t.Run("get score", func(t *testing.T) {
 		response := httptest.NewRecorder()
 		server.ServeHTTP(response, poker.TestNewGetScoreRequest(player))
-		poker.AssertStatus(t, response.Code, http.StatusOK)
+		poker.AssertStatus(t, response, http.StatusOK)
 
 		poker.AssertResponseBody(t, response.Body.String(), "3")
 	})
@@ -33,7 +33,7 @@ func TestRecordingWinsAndRetrievingThem(t *testing.T) {
 	t.Run("get league", func(t *testing.T) {
 		response := httptest.NewRecorder()
 		server.ServeHTTP(response, poker.TestNewLeagueRequest())
-		poker.AssertStatus(t, response.Code, http.StatusOK)
+		poker.AssertStatus(t, response, http.StatusOK)
 
 		got := poker.TestGetLeagueFromResponse(t, response.Body)
 		want := poker.League{

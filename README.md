@@ -396,7 +396,8 @@ your interface with just a function
 
 ##### WebSockets
 
-- TBC
+- this section demonstrates testing in an asychronous manner
+- for tests that are delayed or never finish create helper retry methods with timeouts
 
 ###### code
 

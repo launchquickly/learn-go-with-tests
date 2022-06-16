@@ -3,7 +3,7 @@ package poker_test
 import (
 	"testing"
 
-	poker "github.com/launchquickly/learn-go-with-tests/5-time"
+	poker "github.com/launchquickly/learn-go-with-tests/6-websockets"
 )
 
 func TestFileSystemStore(t *testing.T) {
